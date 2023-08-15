@@ -9,19 +9,20 @@ const { message } = storeToRefs(store)
 </script>
 
 <template>
- <header class="max-h-screen leading-normal flex justify-center">
-  <div id="flashMessage" v-if="message">
-    <h4>{{ message }}</h4>
-  </div>
-  <nav class="flex space-x-4">
-    <RouterLink :to="{ name: 'EventList' }">Home</RouterLink>
-    <RouterLink :to="{ name: 'about' }">About</RouterLink>
-    <RouterLink :to="{ name: 'catagory' }">Category</RouterLink>
-    <RouterLink :to="{ name: 'student' }">Student</RouterLink>
-  </nav>
-</header>
+  <header class="max-h-screen leading-normal flex justify-center">
+    <div class="p-8 absolute">
+      <div id="flashMessage" v-if="message">
+        <h4>{{ message }}</h4>
+      </div>
+    </div>
 
-
+    <nav class="flex space-x-4">
+      <RouterLink :to="{ name: 'EventList' }">Home</RouterLink>
+      <RouterLink :to="{ name: 'about' }">About</RouterLink>
+      <RouterLink :to="{ name: 'catagory' }">Category</RouterLink>
+      <RouterLink :to="{ name: 'student' }">Student</RouterLink>
+    </nav>
+  </header>
 
   <RouterView />
 </template>
@@ -47,8 +48,6 @@ nav a {
 nav a.router-link-exact-active {
   color: #42b983;
 }
-
-
 
 .logo {
   display: block;
