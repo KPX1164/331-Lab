@@ -3,4 +3,4 @@ services:
   web:
     image: "hakush1n/se331-lab06:latest"
     ports:
-      - 8005:80
+      - 8001:80
